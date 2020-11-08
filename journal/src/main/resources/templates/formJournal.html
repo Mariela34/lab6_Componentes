@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+	<title>Formulario Diario</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Form</h1>
+    <form action="#" th:action="@{/postJournal}" th:object="${journal}" method="post">
+    	<p>Title: <input type="text" th:field="*{title}" /></p>
+        <p>Created: <input type="text" th:field="*{created}" /></p>
+        <p>Summary: <input type="text" th:field="*{summary}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+    <button><a href="/journals">Ir a lista de Journals</a></button>
+</body>
+</html>

@@ -9,4 +9,5 @@ public interface JournalService {
 	
 	public void saveJournal(Journal newJournal);
 	public List<Journal> getAllJournals();
+	public Journal getJournal(Long id);
 }

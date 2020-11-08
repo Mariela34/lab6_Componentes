@@ -11,6 +11,7 @@ import javax.persistence.*;
 @Table(name = "tjournal")
 public class Journal {
 	@Id 
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	

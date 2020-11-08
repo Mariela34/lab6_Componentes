@@ -18,7 +18,13 @@ public class JournalServiceImpl implements JournalService {
 		}
 		@Override
 		public List<Journal> getAllJournals() {
-		return journalRepo.findAll();
+		List<Journal> journals = journalRepo.findAll();
+		return journals;
+		}
+		@Override
+		public Journal getJournal(Long id) {
+			return journalRepo.getOne(id);
+			
 		}
 		
 		

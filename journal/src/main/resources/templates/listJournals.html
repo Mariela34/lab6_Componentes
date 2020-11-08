@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lista Journals</title>
+</head>
+<body>
+	<div>
+		<h1>Journal</h1>
+		<button><a href="/postJournal">Ir a registro de Diario</a></button>
+		<div th:each="journal,status : ${journals}">
+			<ul>
+				<li>
+					
+					<h4>Titulo:
+						<span th:text="${journal.title}">TITLE</span>
+					</h4>
+					
+					<p>Creado:
+						<small><i></i> <span
+							th:text="${journal.createdAsShort}">CREATED</span> </small>
+					</p>
+					
+					<p>Resumen:
+						<span th:text="${journal.summary}">SUMMARY</span>
+					</p>
+					<button><a th:href="@{/view/} + ${journal.id}">Ver Journal</a></button>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

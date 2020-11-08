@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<title>Journal</title>
+</head>
+<body>
+	<h1>Journal</h1>
+	<p>Identificador</p>
+	<h4>
+		<span th:text="${journal.id}">ID</span>
+	</h4>
+	<p>Titulo</p>
+	<h4>
+		
+		<span th:text="${journal.title}">TITLE</span>
+	</h4>
+	<p>Creado</p>
+	<p>
+		<small><i></i> <span
+			th:text="${journal.created}">CREATED</span> </small>
+	</p>
+	<p>Resumen</p>
+	<p>
+		<span th:text="${journal.summary}">SUMMARY</span>
+	</p>
+	<button><a href="/journals">Ir a lista de Journals</a></button>
+	<button><a href="/postJournal">Ir a registro de Diario</a></button>
+</body>
+</html>
