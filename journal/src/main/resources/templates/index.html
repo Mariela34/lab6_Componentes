@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="Content-Type" content="text/html"></meta>
+<title>Journal</title>
+</head>
+<body>
+	<div>
+		<h1>Journal</h1>
+		<div th:each="entry,status : ${journal}">
+		<ul>
+			
+				<li>
+						<h4>
+							<span th:text="${entry.title}">TITLE</span>
+						</h4>
+						<p>
+							<small><i></i> <span
+								th:text="${entry.createdAsShort}">CREATED</span> </small>
+						</p>
+						<p>
+							<span th:text="${entry.summary}">SUMMARY</span>
+						</p>
+				</li>
+			
+		</ul>
+		</div>
+	</div>
+</body>
+</html>
